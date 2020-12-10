@@ -1,17 +1,18 @@
 #include <iostream>
 #include <string>
+#include "FileModule.h"
 
 void inputLoop()
 {
     while (1)
     {
-        std::cout << " $ ";
+        std::cout << "$ ";
         
         std::string InputString;
 
         std::getline(std::cin, InputString);
 
-        std::cout << "\n\a" << InputString << "\n\n";
+        File::Actions::Delete(InputString);
     }
     return;
 }
@@ -19,7 +20,7 @@ void inputLoop()
 int main()
 {
     std::cout << "White Feather Terminal version 0.1.0\n"
-              << "Character limit is of 2048 characters including null terminator.\n\n";
+              << "Copyright H4ck Software 2020.\n\n";
     
     inputLoop();
     return 0;

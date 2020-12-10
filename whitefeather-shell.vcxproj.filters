@@ -18,5 +18,16 @@
     <ClCompile Include="whitefeather-shell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FileModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDelete.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
