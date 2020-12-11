@@ -6,6 +6,10 @@
 #include <string>
 #include <cstdbool>
 
+/**
+* @brief File Module Namespace
+* @var b
+*/
 namespace File
 {
 	void Do(std::string Action, std::string Range, std::string Flags);
