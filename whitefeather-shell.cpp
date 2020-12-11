@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 
+#include "CommandStringDecoder.h"
 #include "FileModule.h"
 
 void InputLoop()
@@ -14,7 +15,30 @@ void InputLoop()
 
         std::getline(std::cin, InputString);
 
-        File::Delete(InputString);
+        CommandStringDecoder InputCommand(InputString);
+
+        if (InputCommand.hasValidModule() == true)
+        {
+            if (InputCommand.hasValidAction() == true)
+            {
+                std::cout << "Module: " << InputCommand.GetModule() << ", Action: " << InputCommand.GetAction() << "\n\n";
+            }
+            else if (InputCommand.GetAction().empty() == true)
+            {
+                std::cout << "\nSyntax Error!\n"
+                    << "\n\tNo action especified!\n\n";
+            }
+            else
+            {
+                std::cout << "\nSyntax Error!\n"
+                          << "\n\tUnexpected action: " << InputCommand.GetModule() << "." << InputCommand.GetAction() << "\n\n";
+            }
+        }
+        else
+        {
+            std::cout << "\nSyntax Error!\n"
+                      << "\n\tUnexpected module: " << InputCommand.GetModule() << "\n\n";
+        }
     }
     return;
 }

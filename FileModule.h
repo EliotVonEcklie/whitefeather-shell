@@ -14,6 +14,6 @@ namespace File
 	extern std::vector<std::string> Actions;
 		
 	void Create(std::string Files, std::string Content);
-	void Delete(std::string Files, bool Force = false, bool Recursive = false);
+	void Delete(std::string Files, bool Force, bool Recursive);
 }
 
