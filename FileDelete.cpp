@@ -1,19 +1,17 @@
 #include "FileModule.h"
 
-void File::Actions::Delete(std::string FileRange)
+void File::Delete(std::string Files, bool Force = false, bool Recursive = false)
 {
-	if(FileRange == "rangeselect everything")
+	std::cout << "\nDeleting range 'everything' from directory 'here' :\n\n";
+
+	size_t Loop;
+
+	for (Loop = 0; Loop < Files.size(); Loop++)
 	{
-		std::cout << "\nDeleting range 'everything' from directory 'here' :\n\n";
-
-		size_t Loop;
-
-		for (Loop = 0; Loop < File::Files.size(); Loop++)
-		{
-			std::cout << Loop << "\t" << File::Files.at(Loop) << "\n";
-		}
-
-		std::cout << "\nDeleted " << Loop << " entries in 0.0 seconds.\n";
-
+		std::cout << Loop << "\t\t" << Files.at(Loop) << "\n";
 	}
+
+	std::cout << "\nDeleted " << Loop << " entries.\n";
+	
+	return;
 }

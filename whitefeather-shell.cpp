@@ -1,8 +1,10 @@
 #include <iostream>
+#include <vector>
 #include <string>
+
 #include "FileModule.h"
 
-void inputLoop()
+void InputLoop()
 {
     while (1)
     {
@@ -12,16 +14,16 @@ void inputLoop()
 
         std::getline(std::cin, InputString);
 
-        File::Actions::Delete(InputString);
+        File::Delete(InputString);
     }
     return;
 }
 
 int main()
 {
-    std::cout << "White Feather Terminal version 0.1.0\n"
+    std::cout << "White Feather Terminal v0.1.0\n"
               << "Copyright H4ck Software 2020.\n\n";
     
-    inputLoop();
+    InputLoop();
     return 0;
 }

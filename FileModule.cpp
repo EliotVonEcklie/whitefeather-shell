@@ -3,33 +3,15 @@
 
 namespace File
 {
-	std::vector<std::string> Files{
-			"a.txt",
-			"b.txt",
-			"c.txt",
-			"d.txt",
-			"e.txt",
-			"f.txt",
-			"g.txt",
-			"h.txt",
-			"i.txt",
-			"j.txt",
-			"k.txt",
-			"l.txt",
-			"m.txt",
-			"n.txt",
-			"o.txt",
-			"p.txt",
-			"q.txt",
-			"r.txt",
-			"s.txt",
-			"t.txt"
-	};
+	std::string CurrentWorkingDirectory;
 
-	namespace Actions
-	{
-		std::vector<std::string> List = {
-			"delete"
-		};
-	}
+	std::vector<std::string> Actions = {
+		"create",
+		"delete"
+	};
+}
+
+void File::Do(std::string Action, std::string Range, std::string Flags)
+{
+	return;
 }
