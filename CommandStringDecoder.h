@@ -13,19 +13,38 @@ public:
 
 	void SetCommandString(std::string CommandString);
 
+	void HandleCommandParserException(int Exception);
+
 	std::string GetModule();
 	std::string GetAction();
 	std::string GetRange();
-	std::string GetDirectory();
+
+	// std::string GetDirectory();
 
 	// std::string GetFlags();
+
+	bool hasValidModule();
+	bool hasValidAction();
+	
+	// bool hasValidRange();
+
+	// bool hasValidDirectory();
+
+	// bool hasValidFlags();
 
 private:
 	std::string CommandString;
 
-	std::string Module;
-	std::string Action;
-	std::string Range;
-	std::string Directory;
+	const std::vector<std::string> ValidModules = {
+		"file",
+		"terminal"
+	};
+
+	const std::vector<std::string> ValidActions = {
+		"file.create",
+		"file.delete",
+		"terminal.exit"
+	};
+
 };
 

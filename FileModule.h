@@ -6,6 +6,10 @@
 #include <string>
 #include <cstdbool>
 
+/**
+* @brief File Module Namespace
+* @var b
+*/
 namespace File
 {
 	void Do(std::string Action, std::string Range, std::string Flags);
@@ -14,6 +18,6 @@ namespace File
 	extern std::vector<std::string> Actions;
 		
 	void Create(std::string Files, std::string Content);
-	void Delete(std::string Files, bool Force = false, bool Recursive = false);
+	void Delete(std::string Files, bool Force, bool Recursive);
 }
 
