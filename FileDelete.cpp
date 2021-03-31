@@ -1,6 +1,6 @@
 #include "FileModule.h"
 
-void File::Delete(std::string Files, bool Force = false, bool Recursive = false)
+void File::Delete(std::string Files, bool Force, bool Recursive)
 {
 	std::cout << "\nDeleting range 'everything' from directory 'here' :\n\n";
 
