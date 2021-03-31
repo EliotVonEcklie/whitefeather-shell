@@ -139,7 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommandStringDecoder.cpp" />
+    <ClCompile Include="FileCreate.cpp" />
+    <ClCompile Include="FileDelete.cpp" />
+    <ClCompile Include="FileModule.cpp" />
     <ClCompile Include="whitefeather-shell.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommandStringDecoder.h" />
+    <ClInclude Include="FileModule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
